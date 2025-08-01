@@ -40,6 +40,8 @@ def handle_mention(event, say):
     # Post the reply tagging @Cursor
     say(f"<@{CURSOR_USER_ID}> {response.text}")
 
+    # this is an update
+
 @flask_app.route("/slack/events", methods=["POST"])
 def slack_events():
     return handler.handle(request)
