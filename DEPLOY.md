@@ -15,6 +15,8 @@ vercel login
 vercel env add SLACK_BOT_TOKEN
 vercel env add SLACK_SIGNING_SECRET
 vercel env add GEMINI_API_KEY
+
+update
 ```
 
 ## 4. Deploy
