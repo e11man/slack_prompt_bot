@@ -3,10 +3,5 @@
     "api/slack-events.py": {
       "runtime": "python3.9"
     }
-  },
-  "env": {
-    "SLACK_BOT_TOKEN": "@slack-bot-token",
-    "SLACK_SIGNING_SECRET": "@slack-signing-secret",
-    "GEMINI_API_KEY": "@gemini-api-key"
   }
 } 

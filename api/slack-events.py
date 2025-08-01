@@ -2,10 +2,6 @@ import os
 from slack_bolt import App
 from slack_bolt.adapter.vercel import SlackRequestHandler
 from google import genai
-from dotenv import load_dotenv
-
-# Load environment variables
-load_dotenv()
 
 # Load tokens from environment
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
@@ -14,7 +10,6 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Initialize Slack app and Gemini client
 app = App(token=SLACK_BOT_TOKEN, signing_secret=SLACK_SIGNING_SECRET)
-handler = SlackRequestHandler(app)
 client = genai.Client()  # Reads GEMINI_API_KEY automatically
 
 @app.event("app_mention")
